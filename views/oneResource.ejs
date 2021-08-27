@@ -1,0 +1,40 @@
+<div class="back">
+    <div class="bg-image">
+        <img src="\images\resources.jpg" alt="resources-page-image" class="all-image">
+        <div class="all-text">
+            <h1 class="all-projects">Resource | <%= title %></h1>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+
+    <div class="row single-text">
+        <p class="gsap-up">
+            <%= content %>
+        </p>
+
+        <% if
+            (links==="add links as displayName @@ url and two links separated by && and if there are no links just keep this field untouched"
+            ) { %>
+
+            <% console.log("No link") %>
+                <% }else{ %>
+                    <p>
+                    <h3 class="gsap-headings single-heading">Important Links</h3>
+                    <% var linksArray=links.split("&&"); %>
+                        <ul>
+                            <% linksArray.forEach(function(link){ %>
+                                <% var linkData=link.split("@@"); %>
+                                    <li><a class="big-link" href=<%=linkData[1] %> aria-label=<%=linkData[0] %> target="blank"><i
+                                                    class="fa fa-link"></i>
+                                                <%= linkData[0] %> </a></li>
+                                    <% }) %>
+                        </ul>
+                        </p>
+                        <% } %>
+
+
+    </div>
+</div>
+<div class="gsap-up"></div>

@@ -1,0 +1,146 @@
+html {
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box;
+    max-width: 100vw !important;
+    max-height: 100% !important;
+    /* scroll-behavior: smooth; */
+    line-height: 1.8rem;
+    overflow-x: hidden;
+    background-color: #e7f7fa;
+}
+
+body .body {
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box;
+    line-height: 1.8rem;  
+    min-height: 100vh !important;
+    display: flex;
+    flex-direction: column;
+}
+
+/* footer/////////////////////////////////////////// */
+.footer-font{
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+footer{
+    padding: 1.25rem;
+    width: 100%;
+    margin-top: auto;
+    text-align: center;
+}
+
+.footer-space{
+    margin-top: 22vh;
+}
+
+/* active members table styling//////////////////////// */
+.table {
+    border-collapse: collapse;
+    width: 100%;
+}
+  
+.td, .th {
+    text-align: left;
+    padding: 0.5rem;
+}
+  
+.tr:nth-child(even) {
+    background-color: #ace6ee;
+}
+
+.gsap-headings::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #e7f7fa;
+    transform-origin: 100% 0;
+}
+
+/* carousel styling ////////////////////////// */
+.carousel .carousel-item {
+    height: 25rem;
+}
+  
+.carousel-item img {
+      position: absolute;
+      object-fit:cover;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      min-height: 25rem;
+}
+
+/* metis-animation///////////////////////////// */
+
+#title-metis span{
+    opacity: 0;
+    transition: all 0.5s ease;
+    transform: translateY(10px);
+    display: inline-block;
+}
+
+#title-metis span.animation{
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+
+/* up slider on each page//////////////////////// */
+.arrow2{
+    font-size: 3rem;
+    opacity: 0.5;
+    color: black;
+}
+
+.fa.arrow2:hover{
+    color:black;
+    opacity: 1;
+}
+
+#button{
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    outline: none;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    background-repeat: no-repeat;
+}
+
+/* OUR TEAM SECTION */
+/*  circular images */
+.rounded-img{
+    margin-bottom: 1rem;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: 0px 8px 8px rgb(79, 82, 83);
+}
+
+/* links in our team section */
+a.icon-link:link{
+    color: #007690;
+}
+
+a.icon-link:active{
+    color: #007690;
+}
+
+a.icon-link:visited{
+    color: #007690;
+}
+a.icon-link:hover{
+    font-size: 1.45rem;   
+    color: #007690;
+}
+    

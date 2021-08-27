@@ -1,0 +1,44 @@
+<div class="back">
+    <div class="bg-image">
+        <img src="\images\projects.jpg" alt="projects-page-image" class="all-image">
+        <div class="all-text">
+            <h1 class="all-projects">Project | <%= title %></h1>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+
+    <div class="row single-text">
+        <h3 class="single-heading gsap-headings">Problem Statement</h3>
+        <p class="gsap-up single-text">
+            <%=content %>
+        </p>
+        <p>
+        <h3 class="single-heading gsap-headings">Github Repository Link</h3>
+
+        <a class="gsap-up single-text big-link" aria-label="github repo link" href=<%=repo_link %> target="blank"><i class="fa fa-link"></i> Repository Link
+        </a>
+
+        </p>
+        <% if
+            (links==="add links as displayName @@ url and two links separated by && and if there are no links just keep this field untouched"
+            ) { %>
+            <% console.log("empty links") %>
+                <% }else{ %>
+                    <p>
+                    <h3 class="gsap-headings single-heading">Important Links</h3>
+                    <% var linksArray=links.split("&&"); %>
+                        <ul class="gsap-up">
+                            <% linksArray.forEach(function(link){ %>
+                                <% var linkData=link.split("@@"); %>
+                                    <li><a class="big-link" href=<%=linkData[1] %>  aria-label=<%=linkData[0] %> target="blank"><i
+                                                    class="fa fa-link"></i>
+                                                <%= linkData[0] %> </a></li>
+                                    <% }) %>
+                        </ul>
+                        </p>
+                        <% } %>
+    </div>
+    <div class="footer-space"></div>
+</div>

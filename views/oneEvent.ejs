@@ -1,0 +1,69 @@
+<div class="back">
+    <div class="bg-image">
+        <img src="\images\events.jpg" alt="events-page-image" class="all-image">
+        <div class="all-text">
+            <h1 class="all-projects">Events | <%= title %></h1>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+
+    <div class="row single-text">
+        <h3 class="single-heading gsap-headings">Date and Time</h3>
+        <p>
+            <%= details %>
+        </p>
+
+        <% if (event_link==="if meet link is available add it else leave this field untouched! " ) { %>
+            <% console.log("no link") %>
+                <% }else{ %>
+                    <p>
+                    <h3 class="single-heading gsap-headings big-link">Event/Workshop Link</h3>
+                    <% var linksArray=event_link.split(","); %>
+
+                        <% linksArray.forEach(function(link){ %>
+                            <a class="gsap-up big-link" aria-label="meet link" href=<%=link%> target="blank">
+                                <i class="fa fa-link"></i>
+                                Event / Workshop Link
+                            </a>
+                            <% }) %>
+
+                                </p>
+                                <% } %>
+
+                                    <h3 class="single-heading gsap-headings">Description</h3>
+                                    <p class="gsap-up">
+                                        <%=content %>
+                                    </p>
+
+                                    <% if
+                                        (links==="add links as displayName @@ url and two links separated by && and if there are no links just keep this field untouched"
+                                        ) { %>
+                                        <% console.log("no links") %>
+                                            <% }else{ %>
+                                                <p>
+                                                <h3 class="gsap-headings single-heading">Important Links</h3>
+                                                <% var linksArray=links.split("&&"); %>
+                                                    <ul>
+                                                        <% linksArray.forEach(function(link){ %>
+                                                            <% var linkData=link.split("@@"); %>
+                                                                <!-- <% console.log(linkData) %> -->
+                                                                <!-- <% console.log(linkData[1]) %> -->
+                                                                <li><a class="big-link" href=<%=linkData[1] %>
+                                                                        aria-label=
+                                                                        <%=linkData[0] %> target="blank" class="content-link"><i
+                                                                                class="fa fa-link"></i>
+                                                                            <%= linkData[0] %>
+                                                                    </a></li>
+                                                                <% }) %>
+                                                    </ul>
+                                                    </p>
+
+                                                    <% } %>
+
+    </div>
+    <div class="footer-space"></div>
+</div>
+<div class="gsap-up"></div>
+<div class="gsap-up"></div>

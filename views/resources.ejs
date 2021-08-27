@@ -1,0 +1,43 @@
+<div class="back">
+    <div class="bg-image">
+        <img src="\images\resources.jpg" alt="resources-page-image" class="top-image1">
+        <div class="all-text">
+            <h1 class="all-title">Resources</h1>
+            <a href="#resources" aria-label="resources"><i class="fa fa-angle-double-down arrow light-color"></i></a>
+        </div>
+    </div>
+</div>
+<div id="resources" class="m-bottom"></div>
+<div class="container text-center">
+
+    <div class=" row row-cols-1 row-cols-md-3 g-4" data-aos="fade-up">
+
+        <% array=array.sort(); %>
+
+            <% array.forEach(function(item){ %>
+
+                <div class="col gsap-up">
+                    <div class="card card-style" data-aos="fade-up">
+                        <img src=<%=item.Relevant_image_link %> class="card-img-top card-image" alt="image">
+
+                        <div class="card-body dark-color">
+                            <h5 class="card-title content-font">
+                                <%=item.Title%>
+                            </h5>
+                            <p class="card-text">
+                                <%=item.Content.slice(0,50)+"... " %>
+                                <a class=" animation-reverse big-link" aria-label="know more"
+                                    href="/metis/resources/<%=item.Title%>">Read More</a>
+                            </p>
+                        </div>
+
+                        <div class="card-footer text-muted">
+                            <% var d=item.updatedAt.substring(0,10); %>
+                                Last Updated on <%= d.substring(8,10)%>-<%=d.substring(5,7)%>-<%=d.substring(0,4) %>
+                        </div>
+                    </div>
+                </div>
+
+                <% }) %>
+    </div>
+</div>

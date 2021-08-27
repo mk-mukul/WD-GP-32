@@ -1,0 +1,208 @@
+<div class="back">
+    <div class="bg-image">
+        <img src="\images\home.jpeg" alt="home-page-image" class="home-image">
+        <div class="bg-text">
+            <img src="\images\metis-logo.png" alt="metis logo" class="metis-logo">
+            <h1 class="navbar-title">METIS</h1>
+            <h2>IIT Gandhinagar</h2>
+            <a href="#vision" aria-label="our vision"><i class="fa fa-angle-double-down arrow light-color"></i></a>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div id="vision"></div>
+    <div class="card-body col-sm-8">
+        <h1 class="home-headings card-title gsap-headings dark-color home-margin">
+            Our Vision
+        </h1>
+        <p class="card-text gsap-up dark-color">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem laudantium quaerat, aspernatur atque
+            beatae
+            sequi fugiat optio soluta molestias saepe corporis error expedita magnam facere natus, sint mollitia
+            placeat
+            blanditiis.
+        </p>
+        <hr class="gsap-up">
+    </div>
+
+    <br>
+    <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-8 text-end">
+            <h1 class="home-headings card-title gsap-headings dark-color">
+                About Us
+            </h1>
+            <p class="card-text gsap-up dark-color">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem laudantium quaerat, aspernatur
+                atque
+                beatae
+                sequi fugiat optio soluta molestias saepe corporis error expedita magnam facere natus, sint
+                mollitia
+                <a href="/metis/about" class="big-link" aria-label="about us">Know More</a>
+            </p>
+            <hr class="gsap-up">
+        </div>
+    </div>
+    <br>
+    <h1 class="home-headings card-title gsap-headings dark-color">
+        Quick Updates
+    </h1>
+    <div class="quick-updates dark-bg-color light-color">
+        <div class="container">
+            
+            <% list=list.reverse() %>
+                <% list.forEach(function(item){ %>
+                    <div class="single-text">
+                        <div>
+                            <%= item.Update %>
+                        </div>
+                        <% if
+                            (item.Relevant_link==="add links as displayName @@ url and two links separated by && and if there are no links just keep this field untouched"
+                            ){ %>
+                            <% console.log("no link") %>
+                                <% }else{ %>
+                                    <div>
+                                        <span>
+                                            <% var linkArray=item.Relevant_link.split("&&"); %>
+                                                <% linkArray.forEach(function(link){ %>
+                                                    <% var linkData=link.split("@@"); %>
+                                                        <a class="link-color" href=<%=linkData[1] %> alt=<%=linkData[0]
+                                                                %>
+                                                                target="blank"> <%= linkData[0] %> </a> <span
+                                                            class="inline"></span>
+
+                                                        <% }) %>
+                                        </span>
+                                    </div>
+                                    <% } %>
+                                        <p class="updates-alignment">
+                                            <% var d= item.updatedAt.substring(0,10); %>
+                                                Last Updated on <%= d.substring(8,10)%>-<%=d.substring(5,7)%>-<%=d.substring(0,4) %>      
+                                        </p>
+                    </div>
+                    <hr>
+                    <% }); %>
+        </div>
+    </div>
+    <br>
+    <div class="container">
+        <div class="row row-cols-1 row-cols-md-2 g-4 gsap-up">
+            <div class="col-sm-6" data-aos="fade-up">
+                <div class="home-heading2 dark-color">
+                    Projects
+                </div>
+                <div class="row">
+                    <div class="col-sm-8">
+                        <div class="card card-style">
+                            <img src="\images\web-dev.jpg" class="card-img-top card-image" alt="image">
+                            <div class="card-body">
+                                <h5 class="card-title content-font dark-color">
+                                    Web Dev
+                                </h5>
+                                <p class="card-text dark-color">
+                                    Lorem ipsum dolor sit...
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 center-of-box">
+                        <a class="btn animation-reverse dark-bg-color light-color card-style btn-style"
+                            href="/metis/projects">See More <i class="fa fa-arrow-right light-color"></i> </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6" data-aos="fade-up">
+                <div class="home-heading2 dark-color">
+                    Events/Workshops
+                </div>
+                <div class="row">
+                    <div class="col-sm-8">
+                        <div class="card card-style">
+                            <img src="/images/react.png" class="card-img-top card-image" alt="image">
+                            <div class="card-body">
+                                <h5 class="card-title content-font dark-color">
+                                    React
+                                </h5>
+                                <p class="card-text dark-color">
+                                    22 Aug, 3PM onwards
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 center-of-box">
+                        <a class="btn animation-reverse dark-bg-color light-color card-style btn-style"
+                            href="/metis/events_workshops">See More <i class="fa fa-arrow-right light-color"></i> </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <hr>
+    <br>
+
+    <div class="text-center" data-aos="fade-up">
+        <h3 class="home-headings dark-color">
+            Image Gallery
+        </h3><br>
+        <div id="carouselID" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselID" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselID" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselID" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselID" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carouselID" data-bs-slide-to="4" aria-label="Slide 5"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://wallpaperaccess.com/full/1178341.jpg" class="d-block w-100 carousel-image"
+                        alt="image1">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://wallpaperaccess.com/full/1178350.jpg" class="d-block w-100 carousel-image"
+                        alt="image2">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://adwallpapers.xyz/uploads/posts/75965-roses-flowers-4k-ultra-hd-wallpaper__nature.jpg"
+                        class="d-block w-100 carousel-image" alt="image3">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://i.pinimg.com/originals/3c/aa/1a/3caa1a1ffdda2a9a274dc486a10c6a4b.jpg"
+                        class="d-block w-100 carousel-image" alt="image3">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://pxwall.com/wp-content/uploads/2019/03/Flower-Pics.jpg"
+                        class="d-block w-100 carousel-image" alt="image3">
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br><br>
+    <hr>
+    <br>
+    <section class="counters">
+        <div class="row justify-content-evenly light-color ">
+
+            <div class="col-sm-4 dark-bg-color stats card-style" data-aos="fade-up" id="main-container">
+
+                <div class="text-center">
+
+                    <div class="counter" data-bs-target=<%=members %> >
+                        0
+                    </div><br>
+                    <p class="counter-p">Active Members</p>
+                </div>
+            </div>
+
+            <!-- separate from abolve -->
+            <div class=" col-sm-4 dark-bg-color stats card-style" data-aos="fade-up" id="main-container1">
+                <div class="text-center">
+                    <div class="counter" data-bs-target=<%=projects %> >0</div><br>
+                    <p class="counter-p">Active Projects</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

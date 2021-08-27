@@ -1,0 +1,86 @@
+/* for all links */
+a{
+    text-decoration: none;
+  }
+
+/* for quick updates section */
+
+a.link-color:link {
+    color: #e7f7fa;
+    text-decoration: none;
+}
+  
+/* visited link */
+a.link-color:visited {
+    color: #e7f7fa;
+}
+  
+/* mouse over link */
+a.link-color:hover {
+  color: wheat;
+  font-size: 1.35rem;
+}
+
+/* selected link */
+a.link-color:active {
+  color: #e7f7fa;
+}
+
+/* footer icons////////////////////// */
+a.icon:link {
+    text-decoration: none;
+    color: #e7f7fa;
+}
+  
+/* visited link */
+a.icon:visited {
+  color: #e7f7fa;
+}
+
+/* mouse over link */
+a.icon:hover {
+color: #11c7e7;
+}
+
+/* selected link */
+a.icon:active {
+color: #e7f7fa;
+}
+
+.icon-size{
+    font-size: 1.5rem;
+}
+
+.icon-size:hover{
+    font-size: 1.65rem;
+}
+
+/* button styling//////////////// */
+a.btn-style:link{
+    color: white;
+  }
+
+a.btn-style:hover{
+    color: rgb(231, 207, 161);
+    font-size: 1.25rem;
+}
+
+/* for READ MORE option on resources events and projects page */
+a.big-link:link{
+  color: #07d4f8;
+}
+
+a.big-link:hover{
+  color: #07d4f8;
+  font-size: 1.35rem;
+}
+
+a.big-link:visited{
+  color:#07d4f8;
+}
+
+a.big-link:active{
+  color: #07d4f8;
+  font-size: 1.35rem;
+}
+
