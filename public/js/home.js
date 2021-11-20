@@ -3,9 +3,7 @@ const counters = document.querySelectorAll('.counter');
 var observer = new IntersectionObserver(function (entries) {
     if (entries[0].isIntersecting === true) {
         onScreen = "yes";
-        // console.log(onScreen);
         if (onScreen === "yes") {
-            // counters.forEach(counter => {
             const updateCount = () => {
                 const counter = counters[0]
                 const target = Number(counter.getAttribute('data-bs-target'));
@@ -20,7 +18,6 @@ var observer = new IntersectionObserver(function (entries) {
                 }
             }
             updateCount();
-            // });
             const updateCount2 = () => {
                 const counter = counters[1]
                 const target = Number(counter.getAttribute('data-bs-target'));
