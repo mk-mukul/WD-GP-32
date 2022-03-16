@@ -10,7 +10,7 @@ Developed by
 
 Prakriti        https://github.com/Prakriti123222
 
-Mukul Raj       https://github.com/mukul-raj
+Mukul Raj       https://github.com/mk-mukul
 
 Sukanya More    https://github.com/gauri11m
 
